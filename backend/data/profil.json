@@ -1,8 +1,11 @@
 {
-  "nom": "Prénom Nom — à compléter",
+  "nom": "Lucas Duhamel",
   "titre": "Manager en ingénierie informatique · Smart & Green Building",
   "accroche": "Je m'intéresse aux solutions numériques utiles, aux bâtiments intelligents et aux technologies connectées.",
   "disponibilite": "Portfolio en construction",
-  "liens": {"github":"https://github.com/thaeker/Portfolio","linkedin":""},
+  "liens": {
+    "github": "https://github.com/lucas-duhamel/Portfolio",
+    "linkedin": ""
+  },
   "cv": ""
 }
