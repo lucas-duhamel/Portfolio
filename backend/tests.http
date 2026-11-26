@@ -1,0 +1,25 @@
+@baseUrl = http://localhost:3000
+
+### Santé
+GET {{baseUrl}}/api/health
+
+### Profil
+GET {{baseUrl}}/api/profil
+
+### Projets
+GET {{baseUrl}}/api/projets
+
+### Filtre IoT
+GET {{baseUrl}}/api/projets?tag=IoT
+
+### Détail inexistant : attendu 404
+GET {{baseUrl}}/api/projets/projet-inexistant
+
+### Compétences
+GET {{baseUrl}}/api/competences
+
+### Parcours
+GET {{baseUrl}}/api/parcours
+
+### Route inconnue : attendu 404 JSON
+GET {{baseUrl}}/api/inconnue
