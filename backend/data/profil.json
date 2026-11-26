@@ -1,11 +1,11 @@
 {
-  "nom": "Lucas Duhamel",
-  "titre": "Manager en ingénierie informatique · Smart & Green Building",
-  "accroche": "Je m'intéresse aux solutions numériques utiles, aux bâtiments intelligents et aux technologies connectées.",
-  "disponibilite": "Portfolio en construction",
-  "liens": {
-    "github": "https://github.com/lucas-duhamel/Portfolio",
-    "linkedin": ""
-  },
-  "cv": ""
+"nom": "Lucas Duhamel",
+"titre": "Manager en ingénierie informatique · Smart & Green Building",
+"accroche": "Passionné par l'informatique et les nouvelles technologies, je m'intéresse particulièrement à la domotique, aux bâtiments intelligents et aux solutions connectées qui améliorent notre quotidien.",
+"disponibilite": "Portfolio en construction",
+"liens": {
+"github": "https://github.com/lucas-duhamel/Portfolio",
+"linkedin": ""
+},
+"cv": "/CV-Lucas-Duhamel.pdf"
 }
