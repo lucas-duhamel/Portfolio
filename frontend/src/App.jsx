@@ -32,7 +32,7 @@ function Footer() {
   return <footer><div className="wrap foot"><span>© {new Date().getFullYear()} Portfolio</span><span>React · Node.js · Express</span><a href="#top">Retour en haut ↑</a></div></footer>;
 }
 function ProjectCard({p}) {
-  return <article className="card"><div className="cardmeta"><span>{p.categorie || "Projet"}</span><span>{p.annee || ""}</span></div>
+  return <article className="card">{p.image && <img className="project-image" src={p.image} alt={p.imageAlt || ("Illustration du projet " + p.titre)} loading="lazy" />}<div className="cardmeta"><span>{p.categorie || "Projet"}</span><span>{p.annee || ""}</span></div>
     <h3>{p.titre}</h3><p>{p.resume}</p><div className="tags">{(p.tags || []).map(t=><span key={t}>{t}</span>)}</div>
     <Link className="more" to={"/projets/" + p.slug}>Découvrir le projet ↗</Link></article>;
 }
@@ -62,7 +62,7 @@ function Projects() {
 }
 function ProjectDetail() {
   const {slug}=useParams(); const state=useApi("/api/projets/"+encodeURIComponent(slug));
-  return <section className="page wrap"><Link className="back" to="/projets">← Retour aux projets</Link><Etat state={state}>{state.data && <article className="detail"><p className="eyebrow">{state.data.categorie || "Projet"} {state.data.annee || ""}</p><h1>{state.data.titre}<span>.</span></h1><p className="intro">{state.data.resume}</p><div className="tags">{(state.data.tags||[]).map(t=><span key={t}>{t}</span>)}</div>{["contexte","objectif","realisation","resultat"].map(k=>state.data[k] && <section key={k}><h2>{k==="realisation"?"Réalisation":k[0].toUpperCase()+k.slice(1)}</h2><p>{state.data[k]}</p></section>)}{state.data.technologies?.length>0 && <section><h2>Technologies</h2><p>{state.data.technologies.join(" · ")}</p></section>}</article>}</Etat></section>;
+  return <section className="page wrap"><Link className="back" to="/projets">← Retour aux projets</Link><Etat state={state}>{state.data && <article className="detail"><p className="eyebrow">{state.data.categorie || "Projet"} {state.data.annee || ""}</p><h1>{state.data.titre}<span>.</span></h1><p className="intro">{state.data.resume}</p>{state.data.image && <img className="detail-image" src={state.data.image} alt={state.data.imageAlt || ("Illustration du projet " + state.data.titre)} />}<div className="tags">{(state.data.tags||[]).map(t=><span key={t}>{t}</span>)}</div>{["contexte","objectif","realisation","resultat"].map(k=>state.data[k] && <section key={k}><h2>{k==="realisation"?"Réalisation":k[0].toUpperCase()+k.slice(1)}</h2><p>{state.data[k]}</p></section>)}{state.data.technologies?.length>0 && <section><h2>Technologies</h2><p>{state.data.technologies.join(" · ")}</p></section>}</article>}</Etat></section>;
 }
 function Skills() {
   const {data,loading,error}=useApi("/api/competences"); const labels=["","Notions","Autonome","Avancé"];
