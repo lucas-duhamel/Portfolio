@@ -1,6 +1,8 @@
 # Portfolio — React & Node.js
 
-Portfolio professionnel construit dans le cadre du module React + Node.js (M2 Manager en ingénierie informatique — Smart & Green Building, ESIEE-IT).
+Portfolio professionnel de Lucas Duhamel, construit dans le cadre du module React + Node.js (M2 Manager en ingénierie informatique — Smart & Green Building, ESIEE-IT).
+
+Dépôt : https://github.com/lucas-duhamel/Portfolio
 
 Le socle technique est en place. Les informations personnelles, les projets, les compétences détaillées, le parcours et le CV restent à compléter avec des données exactes et validées.
 
